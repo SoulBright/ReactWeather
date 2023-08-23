@@ -1,0 +1,12 @@
+@import '~normalize.css';
+
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+

@@ -1,0 +1,36 @@
+@import "../../../styles/variables.scss";
+
+.this__day {
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    background: $background;
+    box-shadow: $box-shadow;
+    border-radius: $bodred-radius;
+    transform: 0.3s;
+}
+
+.top__block {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    width: 100%;
+    margin-bottom: 30px;
+    .this__temp {
+        font-size: 96px;
+        font-weight: 500;
+        color: $primry-color;
+    }
+    .this__day_name {
+        font-size: 40px;
+        color: $light-color;
+    }
+}
+
+.buttom__block {
+    .this__time,
+    .this__city {
+        color: $base-color;
+        font-size: 25px;
+    }
+}

@@ -1,0 +1,39 @@
+@import "../../../styles/variables.scss";
+
+.this__day_info{
+    position: relative;
+    padding: 40px;
+    max-width: 750px;
+    width: 100%;
+    background: $background;
+    box-shadow: $box-shadow;
+    border-radius: $bodred-radius;
+}
+
+.item {
+    position: relative;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+
+    .item__name,
+    .item__value {
+        margin-right: 20px;
+        font-size: 18px;
+    }
+    .item__name {
+        color: $base-color;
+    }
+    .item__value{
+        color: $light-color;
+    }
+}
+
+.cloud {
+    width: auto;
+    height: 283px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
