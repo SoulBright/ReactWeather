@@ -3,28 +3,35 @@ import React from 'react'
 import ThisDayItem from './ThisDayItem';
 import s from './ThisDayInfo.module.scss'
 
+import { Weather } from '../../../store/types/types'
+
 export interface Item {
     name: string;
     value: string;
 }
 
-export default function ThisDayInfo() {
+interface Props {
+    weather: Weather;
+}
+
+
+export default function ThisDayInfo({weather}: Props) {
     const items = [
         {
             name: 'Температура:',
-            value: '20° - ощущается как 17°',
+            value: `${Math.round(weather.main.temp)}° - ощущается как ${Math.round(weather.main.feels_like)}°`,
         },
         {
             name: 'Давление:',
-            value: '765 мм ртутного столба - нормальное',
+            value: `${Math.round(weather.main.pressure)} мм ртутного столба`,
         },
         {
-            name: 'Осадки:',
-            value: 'Без осадков',
+            name: 'Влажность:',
+            value: `${Math.round(weather.main.humidity)} %`,
         },
         {
             name: 'Ветер:',
-            value: '3 м/с юго-запад - легкий ветер',
+            value: `${Math.round(weather.wind.speed)} м/с`,
         },
     ];
     return (
